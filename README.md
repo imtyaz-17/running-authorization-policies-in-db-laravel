@@ -1,23 +1,5 @@
 # How to
 
-## Vendor differences
-
-In some lessons, the source code is slightly different, depending on the database type (MySQL, Postgres and SQLite). When this happens, you'll see a database driver check in the source code that looks something like this:
-
-```php
-if (config('database.default') === 'pgsql') {
-    // ...
-}
-```
-
-In some cases, it's not possible to create variations for all three database types, and an exception will be thrown instead.
-
-```php
-if (config('database.default') === 'sqlite') {
-    throw new \Exception('This lesson does not support SQLite.');
-}
-```
-
 ## Installation
 
 To test this demo application, please follow these instructions.
@@ -73,8 +55,6 @@ php artisan db:seed
 ```
 
 Now you're ready to go!
-
-If you're using [Laravel Valet](https://laravel.com/docs/valet), [Laravel Homestead](https://laravel.com/docs/valet), or some other local development environment, view your website there as you normally would. Alternatively, you can also use the built-in PHP server:
 
 ```sh
 php artisan serve
